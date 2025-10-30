@@ -23,22 +23,22 @@ let backgroundImg1, backgroundImg2, bunnyImg, bear2Img, sunsetImg, homeImg, catc
 
 /* PRELOAD LOADS FILES */
 function preload(){
-  newFont = loadFont('assets/VT323-Regular.ttf');
-   backgroundImg1 = loadImage("assets/teddy.jpg");
-  backgroundImg2 = loadImage("assets/city.jpeg")
-  bunnyImg = loadImage("assets/deer.jpeg")
-  bear2Img = loadImage("assets/bear2.jpeg")
-  sunsetImg = loadImage("assets/sunset.jpeg")
-  homeImg = loadImage("assets/home.jpg")
-  fallingObjectImg = loadImage("assets/star.png")
-  catcherImg = loadImage("assets/Catcherbear.png")
+  newFont = loadFont('VT323-Regular.ttf');
+  backgroundImg1 = loadImage("teddy.jpg");
+  backgroundImg2 = loadImage("city.jpeg");
+  bunnyImg = loadImage("deer.jpeg")
+  bear2Img = loadImage("bear2.jpeg")
+  sunsetImg = loadImage("sunset.jpeg")
+  homeImg = loadImage("home.jpg")
+  fallingObjectImg = loadImage("star.png")
+  catcherImg = loadImage("Catcherbear.png")
 
 
 }
 
 /* SETUP RUNS ONCE */
 function setup() {
-  createCanvas(550, 400);
+  createCanvas(550,400);
   textAlign(CENTER);
   textFont(newFont);
   textSize(20);
@@ -48,7 +48,7 @@ function setup() {
   // Set up the home screen
   fill(128,0, 32,220)
   text("Do you want to help a teddy bear find its way home?\n Then look no further than, Teddy's Homebound Adventure.\n Navigate through the many challenges give to help this\ncuddly bear get back to its family.", width / 2, height / 2 - 130);
-  text("Created By: Miya Nagra",270,375)
+  text("Created By: Miya Hope",270,375)
 
   // Create buttons for all screens
   enterButton = new Sprite(width / 2, 250,);
@@ -103,6 +103,7 @@ function setup() {
   new walls.Sprite(-200, -200, 185, 5);
   new walls.Sprite(-200, -200, 5, 380);
 }
+
 
 
 /* DRAW LOOP REPEATS */
@@ -190,7 +191,7 @@ function draw() {
     }
   print(screen);
 }
-   
+
 /* FUNCTIONS TO DISPLAY SCREENS */
 function showScreen1() {
   //print("Enter the game")
@@ -202,7 +203,7 @@ function showScreen1() {
   );
   // Move extra buttons off screen
   enterButton.pos = { x: -100, y: -100 }; 
-  
+
   //do with x and y together first  
   b1Button.pos = { x: -100, y: -100 };
   b2Button.pos = { x: -150, y: -150 };
@@ -232,11 +233,11 @@ function showScreen2() {
   fill(128,0, 32,200)
   textStyle(ITALIC);
   text("She chose the lit path, the safer option thats\n for sure. She slowly makes her way down the path,\n trying not be seen by any humans. Though it\n seems none of them even take a glance at her, let alone\n look down. They are all too busy. That works for her.\n She carries on going and notices a toy shop.\n Is it worth her going in there and getting some help\n and maybe directions or should she just keep going?.  ", width / 2, height / 2 - 120);
-  
+
   // Move extra buttons off screen
   a1Button.pos = { x: -200, y: -200 };
   a2Button.pos = { x: -50, y: -50 };
-  
+
   // Add b1 Button
   b1Button.pos = { x: width / 2 - 160, y: height / 2 + 100 };
   b1Button.w = 120;
@@ -244,7 +245,7 @@ function showScreen2() {
   b1Button.collider = "k";
   b1Button.color = "lightpink";
   b1Button.text = "Keep going";
-  
+
   // Add b2 Button
   b2Button.pos = { x: width / 2 + 160, y: height / 2 + 100 };
   b2Button.w = 120;
@@ -259,13 +260,13 @@ function showScreen3() {
   fill(128,0, 32,190)
   textStyle(ITALIC);
   text("She chose the dark street, the less safe choice,\n but a choice nonetheless. She made her way down the desolate\n street, with no people or open shops in sight. She treks on to\n find a map stand of the city.  All she has to do now is\n get onto the map stand to have a look. She could either create\n a makeshift step stool out of the scraps around the area or she\n could attempt to climb the stand without any help\n most likely resulting in her landing on her face,\n though there is a 27.5% chance she could propel herself up onto it.", width / 2, height / 2 - 130);
-  
+
   // Move extra buttons off screen
   a1Button.pos = { x: -200, y: -200 };
   a2Button.pos = { x: -50, y: -50 };
   b1Button.pos = { x: -100, y: -100 };
   b2Button.pos = { x: -150, y: -150 };
-  
+
   // Add c1 Button
   c1Button.pos = { x: width / 2 - 150, y: height / 2 + 100 };
   c1Button.w = 125;
@@ -273,7 +274,7 @@ function showScreen3() {
   c1Button.collider = "k";
   c1Button.color = "lightpink";
   c1Button.text = "Face the climb";
-  
+
   // Add c2 Button
   c2Button.pos = { x: width / 2 + 150, y: height / 2 + 100 };
   c2Button.w = 120;
@@ -288,7 +289,7 @@ function showScreen4() {
   fill(128,0, 32,190)
   textStyle(ITALIC);
   text("She gets the information needed from either the map stand\n or the toys in the toy shop, making her come back to her senses.\n What she learnt is that she is near the outskirts of the city\n meaning she must be near the village she lives in, as it is on\n the outskirts of the city.  She refers back to the map\n looking for the ‘you are here’ dot, finds in and\n searches for her village name. Using her fluffy paw she traces the\n streets she needs to go on to get home. She\n is getting tired though and needs some energy, so she\n decides to go get some food.\n In this case teddy bears eat stars.", width / 2, height / 2 - 135);
-  
+
   // Move extra buttons off screen
   a1Button.pos = { x: -200, y: -200 };
   a2Button.pos = { x: -50, y: -50 };
@@ -312,7 +313,7 @@ function showScreen5() {
   fill('purple')
   textStyle(ITALIC);
   text("She doesn’t enter the toy shop and is left wandering around the\n city aimlessly wishing she did. She tries to make her way back\n to where the toy shop was by retracing her steps\n but ends up more lost and confused.\n Click RUN to try again.", width / 2, height / 2 - 65);
-  
+
   // Move extra buttons off screen
   b1Button.pos = { x: -200, y: -200 };
   b2Button.pos = { x: -50, y: -50 };
@@ -324,7 +325,7 @@ function showScreen6() {
   fill("purple")
   textStyle(ITALIC);
   text("She tries to build a step stool but ultimately\n it fails as she lacks the skill and\n equipment required to put the pieces together.\n Though she does give it a good try though.\n She is still left lost and confused.\n Click RUN to try again.", width / 2, height / 2 - 115);
-  
+
   // Move extra buttons off screen
   a1Button.pos = { x: -200, y: -200 };
   a2Button.pos = { x: -50, y: -50 };
@@ -338,7 +339,7 @@ function showScreen7_intialise() {
 
   // Move extra buttons off screen
   d1Button.pos = { x: -200, y: -200 };
-  
+
   //Create catcher 
   catcher.pos = { x: 200, y: 380};
   catcher.color = color(95,158,160);
@@ -365,7 +366,7 @@ function showScreen7() {
   fill(128,0, 32,190)
   textStyle(ITALIC);
   text("", width / 2, height / 2 - 115);
-  
+
   //If fallingObject reaches bottom, move back to random position at top
   if (fallingObject.y >= height) {
     fallingObject.x = random(width);
@@ -436,7 +437,7 @@ function showScreen8 () {
   e1Button.collider = "k";
   e1Button.color = "lightpink";
   e1Button.text = "She watches";
-  
+
   // Add c2 Button
   e2Button.pos = { x: width / 2 + 125, y: height / 2 + 100 };
   e2Button.w = 100;
@@ -470,7 +471,7 @@ function showScreen10() {
   background(sunsetImg);
   textStyle(ITALIC);
   text("She chooses to keep going, disregarding the street performers'\n act, though she decides she is still a bit sleepy.\n She takes a seat on a nearby bench, just watching the clouds go by.\n The mesmerisation wears off as she picks herself up\n and gets ready to keep going. After another 15 minutes\n of walking she is at the home stretch but it seems her\n memory fog has gotten to her. Can you help her make her way home?", width / 2, height / 2 - 115);
-  
+
   // move stuff
    e1Button.pos = { x: -200, y: -200 };
    e2Button.pos = { x: -200, y: -200 };
@@ -514,8 +515,8 @@ function showScreen11_initialise() {
   background(backgroundImg2);
   textStyle(ITALIC);
   text("Use the arrow keys\n to move the teddy bear", width / 2 - 20, height / 2 - 100);
-    
-    //Move the player
+
+    //Mmoove the player
 if (player.y < 20) {
     player.y = 20;
   }
@@ -541,9 +542,6 @@ if (player.y < 20) {
   text('Start', 355, 20);
   text('End', 80, 395);
 
-  //Player cannot go above maze
-  
-  
   // Player wins
   if (player.y>380) {
    fill(0);
@@ -563,16 +561,18 @@ if (player.y < 20) {
   }
 
   function showScreen12() {
-    
+
     screen11_game=false;
   print("Display screen 12")
   background(homeImg);
   textStyle(ITALIC);
   text("Our teddy bear made her way home and back to her family.\n Well done! I hope you enjoyed playing this game as much\n as I did making it. Press RUN if you would like to play again.", width / 2, height / 2 - 35);
-  
+
   // move stuff
    g1Button.pos = { x: -200, y: -200 };
    //maze sprites
     player.pos = { x: -200, y: -200};
     removeSprites ();
   }
+
+ 
